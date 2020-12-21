@@ -1,4 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# OPTIONS_GHC -Wwarn=missing-import-lists #-}
 
 {- |
   This module provides Attoparsec-based parsers for the HTTP grammar
@@ -26,12 +27,11 @@ module Network.HTTP.Grammar (
 
 import Prelude hiding (product)
 
-import Control.Applicative (many, (<|>), (<$>), (<*>))
+import Control.Applicative (many, (<|>))
 import Control.Monad (void)
 import Data.Attoparsec.ByteString (Parser, word8, takeWhile1, satisfy,
   inClass, option, string, many1)
 import Data.ByteString (ByteString)
-import Data.Monoid (mconcat)
 import Data.Word (Word8)
 import qualified Data.ByteString as BS
 
