@@ -1,0 +1,6 @@
+packages:
+  "."
+package http-grammar
+  ghc-options:
+    -Werror
+
